@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
         this.health = health;
         _enemiesManager = enemiesManager;
     }
-    
+
     private void OnParticleCollision(GameObject other)
     {
         Debug.Log("Particle Collision!");
@@ -30,17 +30,9 @@ public class EnemyController : MonoBehaviour
             KillEnemy();
         }
     }
-    
+
     private void KillEnemy()
     {
-        if (GetComponent<AutonomousEnemy>())
-        {
-            _enemiesManager.RemoveAutomousEnemy(gameObject);
-        }
-        else
-        {
-            _enemiesManager.RemoveSupervisedEnemy(gameObject);
-        }
-        Destroy(gameObject);
+        _enemiesManager.KilledEnemy(gameObject);
     }
 }
