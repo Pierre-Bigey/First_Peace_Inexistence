@@ -12,6 +12,8 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("The threshold for the player to move")]
     [SerializeField] private float _moveThreshold = 0.1f;
     
+    private bool _isAlive = true;
+    
     public void MovePlayerToXPosition(float xPosition)
     {
         //Apply the threshold to the x position
@@ -28,9 +30,8 @@ public class PlayerManager : MonoBehaviour
     /// </summary>
     public void Die()
     {
-        //Set the time speed to 0
-        Time.timeScale = 0;
-        //Show the game over panel
+        _isAlive = false;
+        GameManager.Instance.GameOver();
         
     }
     

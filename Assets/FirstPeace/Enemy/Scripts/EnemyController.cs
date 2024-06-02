@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -19,6 +20,18 @@ public class EnemyController : MonoBehaviour
             TakeDamage(other.GetComponent<WeaponScript>().damage);
         }
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        //Check if it's the player with tag
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player Collision!");
+            //Call player.Die
+            other.gameObject.GetComponent<PlayerManager>().Die();
+        }
+    }
+
 
     private void TakeDamage(float damage)
     {

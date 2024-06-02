@@ -14,7 +14,7 @@ public class GameOverlayController : MonoBehaviour
     
     private int _killCount;
     private int _enemyCount;
-    private void Start()
+    private void OnEnable()
     {
         _enemiesManager = EnemiesManager.Instance;
         

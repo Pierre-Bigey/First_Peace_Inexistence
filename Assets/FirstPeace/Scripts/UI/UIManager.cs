@@ -39,8 +39,17 @@ public class UIManager : MonoBehaviour
         _gameOverOverlayController = _gameOverOverlayPanel.GetComponent<GameOverOverlayController>();
     }
     
+    public void ShowGameOverOverlayPanel()
+    {
+        _gameOverlayPanel.SetActive(false);
+        _gameOverOverlayPanel.SetActive(true);
+    }
     
-    
+    public void ShowGameOverlayPanel()
+    {
+        _gameOverlayPanel.SetActive(true);
+        _gameOverOverlayPanel.SetActive(false);
+    }
     
 }
 
