@@ -229,7 +229,7 @@ MonoBehaviour:
   _enemyPrefab: {fileID: 2775189281762068171, guid: 9c2ec00504e3d0a4eab288686bb3412b, type: 3}
   EnemySpeed: 10
   EnemyHealth: 5
-  _zDistanceToPlayer: 15
+  _zDistanceToPlayer: 10
   _initialMeanSpawnRate: 1
   _spawnRateDecrease: 0.05
   _minSpawnRate: 0.1
@@ -238,6 +238,7 @@ MonoBehaviour:
   _minStdDev: 0.01
   _initialPoolSize: 2
   _deathRatio: 0.5
+  _maxPoolSize: 40
   zSpawnPosition: 50
   xSPawnAmplitude: 4.5
   _enemiesContainer: {fileID: 1767016999}
